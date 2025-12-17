@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 10</title>
+</head>
+<body>
+    <h2>10. Массив в цикле</h2>
+    <button onclick="display()">Вывести</button>
+    <pre id="result"></pre>
+
+    <script>
+        function display() {
+            const values = ["JS", "HTML", "CSS", "React", "Node"];
+            let output = "";
+            for (let i = 0; i < values.length; i++) {
+                output += `Индекс ${i}: ${values[i]}\n`;
+            }
+            document.getElementById('result').textContent = output;
+        }
+    </script>
+</body>
+</html>
