@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3: Самое длинное слово</title>
+</head>
+<body>
+    <h2>3. Найти самое длинное слово</h2>
+    <input type="text" id="input" placeholder="Введите предложение" value="The quick brown fox jumped" style="width:400px;">
+    <button onclick="findLongest()">Найти</button>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        function findLongest() {
+            const sentence = document.getElementById('input').value.trim();
+            const words = sentence.split(/\s+/);
+            const longest = words.reduce((a, b) => a.length > b.length ? a : b, '');
+            document.getElementById('result').textContent = longest;
+        }
+    </script>
+</body>
+</html>
