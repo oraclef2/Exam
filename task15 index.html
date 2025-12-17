@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 15</title>
+</head>
+<body>
+    <h2>15. Типы ввода</h2>
+    <button onclick="check()">Ввести два значения</button>
+    <pre id="result"></pre>
+
+    <script>
+        function check() {
+            const v1 = prompt("Первое значение:");
+            const v2 = prompt("Второе значение:");
+            document.getElementById('result').textContent = 
+`Первое: ${isNaN(v1) ? 'Строка' : 'Число'}
+Второе: ${isNaN(v2) ? 'Строка' : 'Число'}`;
+        }
+    </script>
+</body>
+</html>
