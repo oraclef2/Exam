@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2: 3-й и 4-й символы</title>
+</head>
+<body>
+    <h2>2. Извлечь 3-й и 4-й символы</h2>
+    <input type="text" id="input" placeholder="Введите строку" value="javascript">
+    <button onclick="extract()">Извлечь</button>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        function extract() {
+            const str = document.getElementById('input').value;
+            const chars = str.slice(2, 4);
+            document.getElementById('result').textContent = chars;
+        }
+    </script>
+</body>
+</html>
