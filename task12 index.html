@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 12</title>
+</head>
+<body>
+    <h2>12. Сложение двух чисел</h2>
+    <button onclick="add()">Сложить</button>
+    <p id="result"></p>
+
+    <script>
+        function add() {
+            const a = Number(prompt("Первое число:"));
+            const b = Number(prompt("Второе число:"));
+            if (!isNaN(a) && !isNaN(b)) {
+                document.getElementById('result').textContent = "Сумма: " + (a + b);
+            }
+        }
+    </script>
+</body>
+</html>
