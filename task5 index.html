@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5</title>
+</head>
+<body>
+    <h2>5. Индекс подстроки</h2>
+    Строка: <input type="text" id="str" value="hello world"><br><br>
+    Подстрока: <input type="text" id="sub" value="world"><br><br>
+    <button onclick="find()">Найти</button>
+    <p>Индекс: <span id="result"></span></p>
+
+    <script>
+        function find() {
+            const str = document.getElementById('str').value;
+            const sub = document.getElementById('sub').value;
+            document.getElementById('result').textContent = str.indexOf(sub);
+        }
+    </script>
+</body>
+</html>
