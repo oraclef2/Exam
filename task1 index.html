@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1: Обратить строку</title>
+</head>
+<body>
+    <h2>1. Обратить строку</h2>
+    <input type="text" id="input" placeholder="Введите строку" value="hello">
+    <button onclick="reverseStr()">Обратить</button>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        function reverseStr() {
+            const str = document.getElementById('input').value;
+            const reversed = str.split('').reverse().join('');
+            document.getElementById('result').textContent = reversed;
+        }
+    </script>
+</body>
+</html>
