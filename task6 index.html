@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 6</title>
+</head>
+<body>
+    <h2>6. Подсчёт в строке</h2>
+    <textarea id="input" rows="4" cols="50">Hello, world! How are you?</textarea><br><br>
+    <button onclick="count()">Подсчитать</button>
+    <pre id="result"></pre>
+
+    <script>
+        function count() {
+            const str = document.getElementById('input').value;
+            const words = str.trim().split(/\s+/).filter(w => w).length;
+            const chars = str.length;
+            const spaces = (str.match(/ /g) || []).length;
+            const special = (str.match(/[^a-zA-Z0-9\s]/g) || []).length;
+            document.getElementById('result').textContent = 
+`Слов: ${words}
+Символов: ${chars}
+Пробелов: ${spaces}
+Специальных: ${special}`;
+        }
+    </script>
+</body>
+</html>
