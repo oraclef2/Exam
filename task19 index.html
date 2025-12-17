@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 19</title>
+    <style>
+        #timer { font-size: 2em; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h2>19. Секундомер</h2>
+    <button onclick="start()">Start</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="reset()">Reset</button>
+    <div id="timer">00:00:00</div>
+
+    <script>
+        let interval, secs = 0;
+        function update() {
+            const h = String(Math.floor(secs / 3600)).padStart(2, '0');
+            const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
+            const s = String(secs % 60).padStart(2, '0');
+            document.getElementById('timer').textContent = `${h}:${m}:${s}`;
+        }
+        function start() {
+            if (!interval) interval = setInterval(() => { secs++; update(); }, 1000);
+        }
+        function pause() {
+            clearInterval(interval);
+            interval = null;
+        }
+        function reset() {
+            pause();
+            secs = 0;
+            update();
+        }
+        update();
+    </script>
+</body>
+</html>
