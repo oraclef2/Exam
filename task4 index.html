@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 4: Переключить регистр</title>
+</head>
+<body>
+    <h2>4. Переключить регистр</h2>
+    <input type="text" id="input" placeholder="Введите текст" value="HeLLo WoRLd">
+    <button onclick="toggle()">Переключить</button>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        function toggle() {
+            const str = document.getElementById('input').value;
+            const toggled = str.split('').map(c => 
+                c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()
+            ).join('');
+            document.getElementById('result').textContent = toggled;
+        }
+    </script>
+</body>
+</html>
