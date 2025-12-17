@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 13</title>
+</head>
+<body>
+    <h2>13. Вычитание двух чисел</h2>
+    <button onclick="sub()">Вычесть</button>
+    <p id="result"></p>
+
+    <script>
+        function sub() {
+            const a = Number(prompt("Первое число:"));
+            const b = Number(prompt("Второе число:"));
+            if (!isNaN(a) && !isNaN(b)) {
+                document.getElementById('result').textContent = "Разность: " + (a - b);
+            }
+        }
+    </script>
+</body>
+</html>
