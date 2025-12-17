@@ -1,0 +1,6 @@
+function longestWord(sentence) {
+    const words = sentence.split(/\s+/);
+    return words.reduce((longest, current) => current.length > longest.length ? current : longest, "");
+}
+// Пример:
+console.log(longestWord("The quick brown fox jumped")); // "jumped"
