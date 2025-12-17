@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 16</title>
+</head>
+<body>
+    <h2>16. Только цифры</h2>
+    <button onclick="check()">Проверить ввод</button>
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            const input = prompt("Введите текст:");
+            const ok = /^\d+$/.test(input);
+            document.getElementById('result').textContent = ok ? "Только цифры" : "Есть не-цифры";
+        }
+    </script>
+</body>
+</html>
