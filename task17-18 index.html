@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 17-18</title>
+</head>
+<body>
+    <h2>17-18. Объект person</h2>
+    <button onclick="create()">Создать и показать</button>
+    <div id="output" style="margin-top:20px;"></div>
+
+    <script>
+        function create() {
+            const name = prompt("Имя:", "Alice");
+            const age = Number(prompt("Возраст:", "25"));
+            const gender = prompt("Пол:", "Female");
+            const person = { name, age, gender };
+            document.getElementById('output').innerHTML = 
+                `<strong>Имя:</strong> ${person.name}<br>
+                 <strong>Возраст:</strong> ${person.age}<br>
+                 <strong>Пол:</strong> ${person.gender}`;
+        }
+    </script>
+</body>
+</html>
